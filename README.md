@@ -378,3 +378,34 @@ git revert <c1a3148
 
 
 git push origin ft/team-page
+
+#bundle4:
+
+git checkout main
+
+git remote add https://github.com/emelyne1234/the-gym-exercise-copy.git
+
+git add home.html
+git commit -m "Update home page content again"
+
+git push origin main
+git push git-copy main
+
+git checkout main
+
+#exercise2:
+
+git checkout -b ft/footer
+
+git add footer.html
+git commit -m "Add initial footer content"
+
+git add footer.html
+git commit -m "Update footer content"
+git push -u origin ft/footer
+git checkout main
+
+git checkout -b ft/squashing
+git merge --squash ft/footer
+git commit -m "footer changes squashing"
+git push -u origin ft/squashing
