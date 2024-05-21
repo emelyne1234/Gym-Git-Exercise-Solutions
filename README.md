@@ -342,4 +342,39 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/emelyne1234/Gym-Git-Exercise-Solutions.git
 0e8f0a9..c1a3148 main -> main
 
-bundle3:
+#bundle3:
+
+git checkout -b ft/team-page
+
+
+git add team.html
+git commit -m "Create team.html with basic content"
+git push -u origin ft/team-page
+
+git checkout main
+
+git checkout -b ft/contact-page
+
+git checkout ft/team-page
+
+git log  
+
+git checkout ft/contact-page
+git cherry-pick c1a3148
+
+echo "<html><body><h1>Contact Page</h1></body></html>" > contact.html
+git add contact.html
+git commit -m "Create contact.html with basic content"
+git push -u origin ft/contact-page
+
+git checkout -b ft/faq-page
+
+git add faq.html
+git commit -m "Create faq.html with basic content"
+git push -u origin ft/faq-page
+
+git checkout ft/team-page
+git revert <c1a3148
+
+
+git push origin ft/team-page
