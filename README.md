@@ -378,3 +378,25 @@ git revert <c1a3148
 
 
 git push origin ft/team-page
+
+ exercise2:
+
+git checkout ft/faq-page
+git checkout -b ft/home-page-redesign
+
+git checkout main
+
+git add team.html
+git commit -m "Update main page content"
+git push origin main
+
+git checkout ft/home-page-redesign
+
+git rebase main
+
+git rebase --continue
+
+
+git add home.html
+git commit -m "Redesign home page"
+git push -u origin ft/home-page-redesign
